@@ -4,6 +4,7 @@ from ttkbootstrap import Style
 from views.upload_view import UploadView
 from views.home_view import HomeView
 from views.help_view import HelpView
+from pathlib import Path
 
 
 class Application(tk.Tk):
@@ -27,11 +28,13 @@ class Application(tk.Tk):
 
     def create_header(self):
         frame = ttk.Frame(self, padding=10)
+
+        letterpath = Path(__file__).parent / 'images/w.png'
+        self.logo = tk.PhotoImage(name='letter', file=letterpath)
+
         letter = ttk.Label(
             master=frame,
-            text='W',
-            font=("French Script MT", 40, "bold"),
-            style='warning.TLabel'
+            image=self.logo,
         )
         letter.pack(side=tk.LEFT, padx=5)
         header = ttk.Label(
