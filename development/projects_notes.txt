@@ -1,0 +1,68 @@
+OVERVIEW
+========
+- must open hyperlinks in the default browser
+- extract and return user data in a json format
+- read contact settings from a user settings file
+- the applications should show and hide views through the pack manager
+
+
+MVC
+====
+
+
+Model
+-------
+upload_model
+	title (string)
+	description (string)
+	transcript (string)
+	username (string)
+	password (string - hide input)
+
+View
+------
+home_view
+	YouTube(URL link) -> BUTTON
+	Google Sheets (URL link) -> BUTTON
+	Github (URL link) -> BUTTON
+	Help Page (VIEW link) -> BUTTON
+	Begin Upload Process (VIEW link) -> BUTTON
+	
+upload_view
+	Title -> LABEL / ENTRY
+	Description -> LABEL / ENTRY
+	Transcript -> LABEL / ENTRY
+	Username -> LABEL / ENTRY
+	Password -> LABEL / ENTRY	
+
+	File Preview -> BUTTON
+	Upload -> BUTTON
+	Loading Bar -> PROGRESSBAR
+
+help_view
+	Contact Info -> LABEL / TEXT
+	Alteratives -> LABEL / TEXT
+
+Controller
+-----------
+home_controller
+	open_url(url: str)
+	open_view(view: Frame)
+	
+upload_controller
+	get_user_input
+	open_file_preview
+	upload_file
+	update_progressbar
+
+help_controller
+
+ASSETS
+======
+- Woodbury chapel logo
+- YouTube Logo
+- Google Sheets Logo
+- Github Logo
+- Help image
+- Upload image
+- Preview image
