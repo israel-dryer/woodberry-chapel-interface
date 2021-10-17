@@ -48,9 +48,6 @@ class Application(tk.Tk):
 
     def navigate_to_home(self, *_):
 
-        print(self.winfo_reqheight())
-        print(self.winfo_reqwidth())
-
         if self.home_view.winfo_ismapped():
             return
 

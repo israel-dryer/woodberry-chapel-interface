@@ -64,8 +64,7 @@ class HomeView(ttk.Frame):
         upload_btn = ttk.Button(
             master=self,
             text='BEGIN\nUPLOADING\nPROCESS',
-            command=lambda: self.controller.navigate_to_view(
-                self, 'upload-view')
+            command=lambda: self.controller.transcribe_data(self)
         )
         upload_btn.grid(row=0, column=2, rowspan=2,
                         sticky=tk.NSEW, padx=5, pady=5)
